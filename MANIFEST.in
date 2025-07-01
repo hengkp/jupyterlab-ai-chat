@@ -1,0 +1,21 @@
+include README.md
+include LICENSE
+include install.json
+include package.json
+include tsconfig.json
+
+# Include source files
+recursive-include src *
+recursive-include style *
+recursive-include jupyter-config *
+
+# Include built extension
+recursive-include jupyterlab_ai_chat/labextension *
+
+# Include schema files if any
+recursive-include schema *
+
+# Exclude development files
+prune node_modules
+prune .git
+prune lib 
